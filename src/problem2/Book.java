@@ -1,44 +1,46 @@
 package problem2;
 
-public class Book {
-	private static String bookName;
-	private static Author author;
-	private static double price;
-	private static int qty;
-	public static String getBookName() {
-		return bookName;
+public class Book  {
+	private String name ;
+	private double price;
+	private int qty=0;
+	private Author author ;
+	
+	public Book(String name, double price, int qty, Author author) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.qty = qty;
+		this.author = author;
 	}
-	public static void setBookName(String bookName) {
-		Book.bookName = bookName;
+	public String getName() {
+		return name;
 	}
-	public static Author getAuthor() {
-		return author;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public static void setAuthor(Author author) {
-		Book.author = author;
-	}
-	public static double getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public static void setPrice(double price) {
-		Book.price = price;
+	public void setPrice(double price) {
+		this.price = price;
 	}
-	public static int getQty() {
+	public int getQty() {
 		return qty;
 	}
-	public static void setQty(int qty) {
-		Book.qty = qty;
+	public void setQty(int qty) {
+		this.qty = qty;
 	}
-	public Book() {
-		super();
-		// TODO Auto-generated constructor stub
+	public Author getAuthor() {
+		return author;
+	}
+	public void setAuthor(Author author) {
+		this.author = author;
 	}
 	@Override
 	public String toString() {
-		return "Book []";
+		return "Book [name=" + name + ", price=" + price + ", qty=" + qty + ", author=" + author + "]";
 	}
-	
-	
 	
 
 }

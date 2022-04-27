@@ -1,34 +1,36 @@
 package problem2;
 
-public class Author extends Book {
-	private static String authorName;
-	private static String email;
-	private static char gender;
-	public static String getAuthorName() {
-		return authorName;
+public class Author {
+	private String  name;
+	private String email;
+	private char gender;
+	public Author(String name, String email, char gender) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.gender = gender;
 	}
-	public static void setAuthorName(String authorName) {
-		Author.authorName = authorName;
+	public String getName() {
+		return name;
 	}
-	public static String getEmail() {
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
 		return email;
 	}
-	public static void setEmail(String email) {
-		Author.email = email;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public static char getGender() {
+	public char getGender() {
 		return gender;
 	}
-	public static void setGender(char gender) {
-		Author.gender = gender;
-	}
-	public Author() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setGender(char gender) {
+		this.gender = gender;
 	}
 	@Override
 	public String toString() {
-		return "Author []";
+		return "Author [name=" + name + ", email=" + email + ", gender=" + gender + "]";
 	}
 	
 	

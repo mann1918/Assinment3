@@ -1,64 +1,55 @@
 package problem1;
 
 public class Employee {
-	private static int id;
-	private static String firstName;
-	private static String lastName;
-	private static double salary;
-	private static String Name=firstName+lastName;
-	//private static double annualSalary;
-	
-	public double annualSalary() {
-		return this.salary*12;
+	private int id;
+	private String firstName;
+	private String lastName;
+	private int salary;
+	public Employee(int id, String firstName, String lastName, int salary) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.salary = salary;
+		getAnnualSalary(this.salary);
+		raiseSalary(25);
 	}
-	
-	
-	public static String getName() {
-		return Name;
-	}
-	public static void setName(String name) {
-		Name = name;
-	}
-	/*public static double getAnnualSalary() {
-		return annualSalary;
-	}
-	public static void setAnnualSalary(double annualSalary) {
-		Employee.annualSalary = annualSalary;
-	}*/
-	public static int getId() {
+	public int getId() {
 		return id;
 	}
-	public static void setId(int id) {
-		Employee.id = id;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public static String getFirstname() {
+	public String getFirstName() {
 		return firstName;
 	}
-	public static void setFirstname(String firstname) {
-		Employee.firstName = firstname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public static String getLastName() {
+	public String getLastName() {
 		return lastName;
 	}
-	public static void setLastName(String lastName) {
-		Employee.lastName = lastName;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public static double getSalary() {
+	public int getSalary() {
 		return salary;
 	}
-	public static void setSalary(double salary) {
-		Employee.salary = salary;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
-	public Employee() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void getAnnualSalary(int salary) {
+		this.salary = salary*12;
+	}
+	public int raiseSalary(int percent) {
+		int sal=(int)(this.salary *percent/100);
+		this.salary=sal + this.salary;
+		return this.salary ;
 	}
 	@Override
 	public String toString() {
-		return "Employee []";
+		return "Employee [id=" + id + ", Name=" + firstName + lastName + ", salary=" + salary
+				+ "]";
 	}
-	
-	
-	
 
 }
